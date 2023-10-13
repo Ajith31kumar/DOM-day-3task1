@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .calculator {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" id="display" class="form-control mb-2" disabled>
+            <div class="row">
+                <button class="col-3 btn btn-primary" onclick="appendToDisplay('7')">7</button> 
+                <button class="col-3 btn btn-primary" onclick="appendToDisplay('8')">8</button>
+                <button class="col-3 btn btn-primary" onclick="appendToDisplay('9')">9</button>
+                <button class="col-3 btn btn-warning" onclick="appendToDisplay('%')">%</button>
+            </div>
+            <div class="row">
+                <button class="col-3 btn btn-primary" onclick="appendToDisplay('4')">4</button>
+                <button class="col-3 btn btn-primary" onclick="appendToDisplay('5')">5</button>
+                <button class="col-3 btn btn-primary" onclick="appendToDisplay('6')">6</button>
+                <button class="col-3 btn btn-warning" onclick="appendToDisplay('/')">/</button>
+            </div>
+            <div class="row">
+                <button class="col-3 btn btn-primary" onclick="appendToDisplay('1')">1</button>
+                <button class="col-3 btn btn-primary" onclick="appendToDisplay('2')">2</button>
+                <button class="col-3 btn btn-primary" onclick="appendToDisplay('3')">3</button>
+                <button class="col-3 btn btn-warning" onclick="appendToDisplay('*')">*</button>
+            </div>
+            <div class="row">
+                <button class="col-3 btn btn-primary" onclick="appendToDisplay('0')">0</button>
+                <button class="col-3 btn btn-danger" onclick="clearDisplay()">C</button>
+                <button class="col-3 btn btn-success" onclick="calculate('=')">=</button>
+                <button class="col-3 btn btn-warning" onclick="appendToDisplay('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="col-12 btn btn-primary" onclick="appendToDisplay('.')">.</button>
+               <button class="col-12 btn btn-warning" onclick="showAlert()">Alert</button>
+                <button class="col-12 btn btn-primary" onclick="appendToDisplay('+')">+</button>
+            </div>
+            <div class="row mt-3">
+                <button class="col-4 btn btn-info" onclick="memoryPlus()">M+</button>
+                <button class="col-4 btn btn-info" onclick="memoryMinus()">M-</button>
+                <button class="col-4 btn btn-info" onclick="memoryClear()">MC</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
